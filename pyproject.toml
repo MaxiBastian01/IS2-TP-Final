@@ -1,0 +1,45 @@
+
+[project]
+name = "singleton-proxy-observer-tpfi"
+description = "Trabajo Práctico Final IS2 - Singleton, Proxy y Observer"
+authors = [
+    { name = "Maxi Bastian", email = "maxinola431@gmail.com" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "boto3",
+]
+dynamic = ["version", "readme"]
+
+[project.urls]
+Homepage = "https://github.com/MaxiBastian01"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+    "pytest-cov",
+    "ruff",
+    "black",
+    "mypy",
+    "pyright",
+    "bandit",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "singleton_proxy_observer_tpfi.__version__" }
+readme = { file = ["README.rst"], content-type = "text/x-rst" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

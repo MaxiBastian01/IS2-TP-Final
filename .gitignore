@@ -1,0 +1,62 @@
+# Ignore Python build artifacts.
+
+MANIFEST
+build/
+dist/
+*.egg-info/
+*.pyc
+*.pyo
+
+
+# Ignore Python environments.
+
+.python-version
+.venv*/
+
+
+# Ignore Make artifacts.
+
+**/.make-update
+
+
+# Ignore settings for various IDEs.
+
+.idea/
+.project/
+.pydevproject/
+.vscode/
+nbproject/
+*.code-workspace
+
+
+# Ignore OS metadata files.
+
+.DS_Store
+Thumbs.db
+
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Tests y cobertura
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+htmlcov/
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Credenciales y variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos temporales del TP
+notificaciones.jsonl
+respuesta.json
+respuesta_list.json

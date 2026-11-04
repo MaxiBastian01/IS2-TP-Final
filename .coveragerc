@@ -1,0 +1,17 @@
+
+[run]
+patch = subprocess
+source =
+    src/singleton_proxy_observer_tpfi
+
+omit =
+    */tests/*
+    */__main__.py
+    */__version__.py
+    */api/*
+    */cli.py
+    */core/config.py
+    */core/logger.py
+
+[report]
+show_missing = True

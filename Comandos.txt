@@ -1,0 +1,38 @@
+CLIENT POWERSHELL
+-----------------
+Activar entorno:
+.\.venv\Scripts\Activate.ps1
+
+GET:
+python src/singleton_proxy_observer_tpfi/singletonclient.py -i src/singleton_proxy_observer_tpfi/input.json -v
+
+SET:
+python src/singleton_proxy_observer_tpfi/singletonclient.py -i src/singleton_proxy_observer_tpfi/input_set.json -v
+
+LIST:
+python src/singleton_proxy_observer_tpfi/singletonclient.py -i src/singleton_proxy_observer_tpfi/input_list.json -o respuesta_list.json
+
+ERROR
+python src/singleton_proxy_observer_tpfi/singletonclient.py -i sin_uuid.json
+
+SERVER POWERSHELL
+-----------------
+Activar entorno:
+.\.venv\Scripts\Activate.ps1
+
+Levantar servidor:
+python src/singleton_proxy_observer_tpfi/singletonproxyobservertpfi.py -v
+
+
+OBSERVER POWERSHELL
+-------------------
+Activar entorno:
+.\.venv\Scripts\Activate.ps1
+
+Levantar Observer:
+python src/singleton_proxy_observer_tpfi/observerclient.py -s localhost -p 8080 -o notificaciones.jsonl -v
+
+
+
+Test
+python -m ruff check src tests; if ($LASTEXITCODE -eq 0) { python -m pytest tests/test_tpfi.py tests/test_integracion.py tests/test_servidor.py tests/test_observerclient.py --cov=src/singleton_proxy_observer_tpfi --cov-report=term-missing }

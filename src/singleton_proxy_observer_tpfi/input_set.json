@@ -1,0 +1,16 @@
+{
+    "UUID": "123456",
+    "ACTION": "set",
+    "ID": "asd-IS2",
+    "cp": "3260",
+    "CUIT": "30-70925411-8",
+    "domicilio": "25 de Mayo 385-1P",
+    "idreq": "473",
+    "idSeq": "1146",
+    "localidad": "Concepción del Uruguay",
+    "provincia": "Entre Rios",
+    "sede": "FCyT - MaxiBastianNicolas",
+    "seqID": "23",
+    "telefono": "03442-123456",
+    "web": "http://www.uader.edu.ar"
+}
